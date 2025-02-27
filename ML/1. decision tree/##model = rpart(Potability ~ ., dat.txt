@@ -1,0 +1,4 @@
+##model = rpart(Potability ~ ., data = train_data, control = list(cp = 0.000001, minsplit 	= 10, minbucket = 10, xval = 6, maxdepth = 15))
+###0.706
+
+##

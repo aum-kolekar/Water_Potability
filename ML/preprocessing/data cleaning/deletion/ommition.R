@@ -1,0 +1,5 @@
+data = read.csv("water_potability.csv")
+cat("Observations in dataset: ", nrow(data))
+cat("\nnumber of observations contaning 'Na' valuse: ", sum(is.na(data)))
+data.clean = na.omit(data)
+cat("\nnumber of observations after omiting 'Na' values: ", nrow(data.clean))

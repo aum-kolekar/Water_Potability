@@ -1,0 +1,29 @@
+data = read.csv("processed.csv")
+
+set.seed(123)
+
+# -----
+yes = which(data$Potability == 1)
+no = which(data$Potability == 0)
+
+# down sampling
+no.down_sample = sample(no, length(yes))
+down = data[c(no.down_sample, yes),]
+set.seed(123)
+down = down[sample(nrow(down)), ]
+write.csv(down, "down.csv")
+
+#up sampling
+yes.up_sample = sample(yes, length(no), replace = TRUE)
+up = data[c(yes.up_sample, no), ]
+set.seed(123)
+up = up[sample(nrow(up)), ]
+write.csv(up, "up.csv")
+
+#half up half down
+half.no = sample(no, 1638)
+half.yes = sample(yes, 1638, replace = TRUE)
+half = data[c(half.no, half.yes), ]
+set.seed(123)
+half = half[sample(nrow(half)), ]
+write.csv(half, "half.csv")

@@ -1,0 +1,5 @@
+data = read.csv('water_potability.csv')
+summary(data)
+data$ph[which(is.na(data$ph))] = median(data$ph, na.rm = TRUE)
+data$Sulphate[which(is.na(data$Sulphate))] = median(data$Sulphate, na.rm = TRUE)
+data$Trihalomethanes[which(is.na(data$Trihalomethanes))] = median(data$Trihalomethanes, na.rm = TRUE)

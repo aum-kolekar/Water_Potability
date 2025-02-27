@@ -1,0 +1,5 @@
+data = read.csv('water_potability.csv')
+summary(data)
+data$ph[which(is.na(data$ph))] = mean(data$ph, na.rm = TRUE)
+data$Sulphate[which(is.na(data$Sulphate))] = mean(data$Sulphate, na.rm = TRUE)
+data$Trihalomethanes[which(is.na(data$Trihalomethanes))] = mean(data$Trihalomethanes, na.rm = TRUE)
