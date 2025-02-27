@@ -42,5 +42,3 @@ git clone https://github.com/aum-kolekar/Water_Potability.git
 2. Install required Python and R libraries.
 3. Run individual model scripts or launch the app for live predictions.
 
-Would you like me to flesh out any section or add installation details? Let me know! 🚀
-
